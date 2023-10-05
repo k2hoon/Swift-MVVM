@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 protocol NetworkHandler {
     func errorHandler(error: Error) -> NetworkError
     
