@@ -15,6 +15,7 @@
 		684C3FFC2ACF360900900195 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684C3FFB2ACF360900900195 /* ListViewModel.swift */; };
 		684C3FFE2ACF370700900195 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684C3FFD2ACF370700900195 /* SettingsViewController.swift */; };
 		684C40002ACF371100900195 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684C3FFF2ACF371100900195 /* SettingsViewModel.swift */; };
+		684C40052ACF422D00900195 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 684C40042ACF422D00900195 /* README.md */; };
 		685828BB2AC7C61100DE4126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685828BA2AC7C61100DE4126 /* AppDelegate.swift */; };
 		685828BD2AC7C61100DE4126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685828BC2AC7C61100DE4126 /* SceneDelegate.swift */; };
 		685828BF2AC7C61100DE4126 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685828BE2AC7C61100DE4126 /* MainViewController.swift */; };
@@ -56,6 +57,7 @@
 		684C3FFB2ACF360900900195 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		684C3FFD2ACF370700900195 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		684C3FFF2ACF371100900195 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		684C40042ACF422D00900195 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		685828B72AC7C61100DE4126 /* Swift-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		685828BA2AC7C61100DE4126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		685828BC2AC7C61100DE4126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		685828AE2AC7C61100DE4126 = {
 			isa = PBXGroup;
 			children = (
+				684C40042ACF422D00900195 /* README.md */,
 				685828B92AC7C61100DE4126 /* Swift-MVVM */,
 				685828D02AC7C61300DE4126 /* Swift-MVVMTests */,
 				685828DA2AC7C61300DE4126 /* Swift-MVVMUITests */,
@@ -301,6 +304,7 @@
 			files = (
 				685828C72AC7C61300DE4126 /* LaunchScreen.storyboard in Resources */,
 				685828C42AC7C61300DE4126 /* Assets.xcassets in Resources */,
+				684C40052ACF422D00900195 /* README.md in Resources */,
 				685828C22AC7C61100DE4126 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
