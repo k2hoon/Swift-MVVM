@@ -6,13 +6,40 @@
 //
 
 import Foundation
+import Combine
 
 class ListViewModel {
-    init() {
+    @Published private(set) var users = [User]()
+    
+    private var apiService: UserService? = nil
+    private var cancellable = Set<AnyCancellable>()
+    
+    init(apiService: UserService) {
+        self.apiService = apiService
         viewModelDidLoad()
+    }
+    
+    func updateList() {
+        self.loadUsers()
     }
     
     func viewModelDidLoad() {
         print("ListViewModel::viewModelDidLoad")
+    }
+}
+
+extension ListViewModel {
+    private func loadUsers() {
+        let completionHandler: (Subscribers.Completion<Error>) -> Void = { completion in
+            print(completion)
+        }
+        
+        let valueHandler: ([User]) -> Void = { [weak self] value in
+            self?.users = value
+        }
+        
+        self.apiService?.fetchUsers()
+            .sink(receiveCompletion: completionHandler, receiveValue: valueHandler)
+            .store(in: &cancellable)
     }
 }

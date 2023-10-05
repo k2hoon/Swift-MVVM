@@ -1,17 +1,17 @@
 //
-//  ListViewController.swift
+//  MainViewController.swift
 //  Swift-MVVM
 //
-//  Created by k2hoon on 2023/10/06.
+//  Created by k2hoon on 2023/09/30.
 //
 
-import Foundation
+import UIKit
 
-class ListViewController: UIViewController {
-    var viewModel: ListViewModel? = nil
+class MainViewController: UIViewController {
+    var viewModel: MainViewModel? = nil
     
-    init(viewModel: ListViewModel? = nil) {
-        print("ListViewController::init")
+    init(viewModel: MainViewModel? = nil) {
+        print("MainViewController::init")
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -21,7 +21,7 @@ class ListViewController: UIViewController {
     }
     
     deinit {
-        print("ListViewController::deinit")
+        print("MainViewController::deinit")
     }
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class ListViewController: UIViewController {
     
     private func setNavigationBar() {
         if let navigation = self.navigationController {
-            self.title = "ListView"
+            self.title = "MainView"
             navigation.navigationBar.prefersLargeTitles = true
         }
     }
@@ -41,7 +41,7 @@ class ListViewController: UIViewController {
     /// Used to temporarily display a view controller class
     private func layoutView() {
         let label = UILabel()
-        label.text = "ListViewController"
+        label.text = "MainViewController"
         label.sizeToFit()
         label.center = self.view.center
         
@@ -52,11 +52,10 @@ class ListViewController: UIViewController {
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-struct ListViewController_Previews: PreviewProvider {
+struct MainViewController_Previews: PreviewProvider {
     static var previews: some View {
         UIViewControllerPreview {
-            ListViewController()
-            
+            MainViewController()
         }
     }
 }
