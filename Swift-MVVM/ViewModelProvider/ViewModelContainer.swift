@@ -18,6 +18,12 @@ final class ViewModelContainer {
     func clearAll() {
         container.removeAll()
     }
+    
+    func remove(for value: ViewModel?) {
+        if let key = container.first(where: { $1 === value })?.key {
+            container[key] = nil
+        }
+    }
 }
 
 extension ViewModelContainer {

@@ -17,7 +17,7 @@ class ListTableCell: UITableViewCell {
         return label
     }()
     
-    var viewModel: ListTableCellViewModel! {
+    var viewModel: ListTableCellViewModel? {
         didSet { bindViewModel() }
     }
     
@@ -50,6 +50,6 @@ class ListTableCell: UITableViewCell {
     }
     
     private func bindViewModel() {
-        nameLabel.text = viewModel.name
+        nameLabel.text = viewModel?.name
     }
 }

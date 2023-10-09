@@ -36,6 +36,9 @@
 		685828F02AC7C63F00DE4126 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685828EC2AC7C63E00DE4126 /* ViewModelFactory.swift */; };
 		685828F12AC7C63F00DE4126 /* ViewModelContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685828ED2AC7C63E00DE4126 /* ViewModelContext.swift */; };
 		685828F22AC7C63F00DE4126 /* ViewModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685828EE2AC7C63E00DE4126 /* ViewModelContainer.swift */; };
+		68CB629B2AD4097E00CABCBF /* CellViewModelAllocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CB629A2AD4097E00CABCBF /* CellViewModelAllocator.swift */; };
+		68CB629D2AD4193200CABCBF /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CB629C2AD4193200CABCBF /* PresentViewController.swift */; };
+		68CB629F2AD419B400CABCBF /* PresentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CB629E2AD419B400CABCBF /* PresentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		685828EC2AC7C63E00DE4126 /* ViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		685828ED2AC7C63E00DE4126 /* ViewModelContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelContext.swift; sourceTree = "<group>"; };
 		685828EE2AC7C63E00DE4126 /* ViewModelContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelContainer.swift; sourceTree = "<group>"; };
+		68CB629A2AD4097E00CABCBF /* CellViewModelAllocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelAllocator.swift; sourceTree = "<group>"; };
+		68CB629C2AD4193200CABCBF /* PresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
+		68CB629E2AD419B400CABCBF /* PresentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,7 @@
 				684C3FFB2ACF360900900195 /* ListViewModel.swift */,
 				684C40142ACF54FC00900195 /* ListTableCellViewModel.swift */,
 				684C3FFF2ACF371100900195 /* SettingViewModel.swift */,
+				68CB629E2AD419B400CABCBF /* PresentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 			children = (
 				684C3FF32ACF2A5C00900195 /* AppViewModelFactory.swift */,
 				684C3FF72ACF338C00900195 /* PreviewProvider.swift */,
+				68CB629A2AD4097E00CABCBF /* CellViewModelAllocator.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				684C3FFD2ACF370700900195 /* SettingViewController.swift */,
+				68CB629C2AD4193200CABCBF /* PresentViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -407,11 +416,14 @@
 				684C3FFE2ACF370700900195 /* SettingViewController.swift in Sources */,
 				685828EF2AC7C63F00DE4126 /* ViewModelProvider.swift in Sources */,
 				684C40072ACF474B00900195 /* User.swift in Sources */,
+				68CB629B2AD4097E00CABCBF /* CellViewModelAllocator.swift in Sources */,
+				68CB629F2AD419B400CABCBF /* PresentViewModel.swift in Sources */,
 				685828F12AC7C63F00DE4126 /* ViewModelContext.swift in Sources */,
 				684C3FF22ACF29DA00900195 /* MainViewModel.swift in Sources */,
 				685828BB2AC7C61100DE4126 /* AppDelegate.swift in Sources */,
 				684C3FF82ACF338C00900195 /* PreviewProvider.swift in Sources */,
 				684C3FF62ACF2FA400900195 /* HomeViewController.swift in Sources */,
+				68CB629D2AD4193200CABCBF /* PresentViewController.swift in Sources */,
 				684C3FF42ACF2A5C00900195 /* AppViewModelFactory.swift in Sources */,
 				684C3FFC2ACF360900900195 /* ListViewModel.swift in Sources */,
 				684C40152ACF54FC00900195 /* ListTableCellViewModel.swift in Sources */,

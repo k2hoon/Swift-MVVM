@@ -45,6 +45,36 @@ class SettingViewController: UIViewController {
         label.sizeToFit()
         label.center = self.view.center
         
+        let button = UIButton()
+        var config = UIButton.Configuration.filled()
+        config.title = "Open"
+        button.configuration = config
+        button.addTarget(self, action: #selector(openViewController), for: .touchUpInside)
+        
         self.view.addSubview(label)
+        self.view.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: label.centerXAnchor),
+            button.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 16)
+        ])
+    }
+    
+    @objc private func openViewController() {
+        let viewController = PresentViewController()
+        self.present(viewController, animated: true)
     }
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct SettingViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        UIViewControllerPreview {
+            SettingViewController(viewModel: SettingViewModel())
+        }
+    }
+}
+#endif

@@ -76,6 +76,7 @@ class ListViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate & UITableViewDataSource
 extension ListViewController: UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel?.users.count ?? 0
@@ -86,14 +87,25 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource  {
                 as? ListTableCell else {
             return UITableViewCell()
         }
-        if let user = self.viewModel?.users[indexPath.row] {
-            cell.viewModel = ListTableCellViewModel(user: user)
-        }
+        cell.viewModel = getCellViewModel(indexPath: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
+    }
+}
+
+// MARK: - CellViewModelAllocator
+extension ListViewController: CellViewModelAllocator {
+    typealias CellViewModel = ListTableCellViewModel
+    
+
+    func getCellViewModel(indexPath: IndexPath) -> ListTableCellViewModel? {
+        if let user = self.viewModel?.users[indexPath.row] {
+            return ListTableCellViewModel(user: user)
+        }
+        return nil
     }
 }
 

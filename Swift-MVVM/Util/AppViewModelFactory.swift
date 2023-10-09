@@ -13,6 +13,7 @@ final class AppViewModelFactory: ViewModelFactory {
         case is MainViewModel.Type: return MainViewModel() as? VM
         case is ListViewModel.Type: return ListViewModel(apiService: UserService()) as? VM
         case is SettingViewModel.Type: return SettingViewModel() as? VM
+        case is PresentViewModel.Type: return PresentViewModel() as? VM
         default:
             return nil
         }

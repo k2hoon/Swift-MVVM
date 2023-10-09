@@ -10,10 +10,14 @@ import Foundation
 final class ListTableCellViewModel {
     var name: String = ""
     
-    private let user: User
+    private var user: User
     
     init(user: User) {
         self.user = user
         self.name = user.name
+    }
+    
+    func setUser(_ user: User) {
+        
     }
 }
